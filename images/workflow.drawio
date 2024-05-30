@@ -1,0 +1,64 @@
+<mxfile host="Electron" modified="2024-05-30T15:32:35.984Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" etag="LlIFkKK3gHwSFJtSIr6h" version="21.6.5" type="device">
+  <diagram name="Page-1" id="WaA_o4PeILcxIMCDxfaf">
+    <mxGraphModel dx="1434" dy="976" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e7APu7UG8t6FqHlxjGWp-1" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="330" y="23.75" width="150" height="216.25" as="geometry" />
+        </mxCell>
+        <mxCell id="e7APu7UG8t6FqHlxjGWp-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="7dRYsWFvsSdo_bRcH7rB-1" target="7dRYsWFvsSdo_bRcH7rB-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="581.88" as="sourcePoint" />
+            <mxPoint x="101.75999999999999" y="311.88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-1" value="Client" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="101.88" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-5" value="Application &lt;br&gt;Spring boot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="150" y="101.88" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-6" value="Table des items" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="342.5" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-7" value="Table outbox" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="342.5" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="7dRYsWFvsSdo_bRcH7rB-5" target="7dRYsWFvsSdo_bRcH7rB-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="142" as="sourcePoint" />
+            <mxPoint x="160" y="142" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="7dRYsWFvsSdo_bRcH7rB-5" target="7dRYsWFvsSdo_bRcH7rB-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="142" as="sourcePoint" />
+            <mxPoint x="353" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-10" value="kafka connect" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+          <mxGeometry x="540" y="23.76" width="90" height="216.25" as="geometry" />
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-11" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.979;exitY=0.599;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="7dRYsWFvsSdo_bRcH7rB-7" target="7dRYsWFvsSdo_bRcH7rB-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="142" as="sourcePoint" />
+            <mxPoint x="353" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-12" value="Broker kafka" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="700" y="23.75" width="140" height="216.25" as="geometry" />
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-13" value="Topic outbox" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="712.5" y="150" width="115" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7dRYsWFvsSdo_bRcH7rB-14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="180" as="sourcePoint" />
+            <mxPoint x="713" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

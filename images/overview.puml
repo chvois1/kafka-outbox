@@ -1,0 +1,47 @@
+@startuml overview
+skin rose
+hide footbox
+autonumber
+title CDC et modèle de transaction Outbox 
+
+participant "Client" as client 
+participant "Application" as app 
+participant "Base de données\nPostgreSQL" as postgres 
+participant "Kafka Connect\nDebezium" as kconnect
+participant "Kafka" as kafka 
+
+activate client
+activate postgres
+activate kafka
+activate kconnect
+
+client->app:POST create item
+activate app
+note right
+  Start transaction
+end note
+app->postgres: persist item entity
+app->postgres: persist outbox entity
+client <-- app: 201 created
+note right
+  Commit transaction
+end note
+deactivate client
+deactivate app
+postgres -> kconnect: capture des\nchangements
+activate postgres
+activate kconnect
+kconnect -> kconnect: transformation\n des données
+deactivate postgres
+kconnect -> kafka: publication d'un \névénement outbox
+deactivate kconnect
+deactivate kafka
+deactivate postgres
+
+legend
+Le modèle de transaction Outbox peut peut se combiner avec une modèle 
+Idempotent comme le modèle inbox. 
+Dans ce cas, on garantit une sémantique de messagerie unique.
+end legend
+
+@enduml
